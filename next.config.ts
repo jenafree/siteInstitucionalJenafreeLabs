@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Habilita export estático para GitHub Pages
+  output: 'export',
+  
+  // Desabilita otimização de imagens no build (necessário para export estático)
+  images: {
+    unoptimized: true,
+  },
+  
+  // Remove trailing slash das URLs
+  trailingSlash: true,
 };
 
 export default nextConfig;
