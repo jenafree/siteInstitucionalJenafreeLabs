@@ -10,11 +10,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="text-2xl font-bold mb-4">
-              Jenafree <span className="text-primary">Labs</span>
-            </div>
+            <img
+              src="/jenafree-logo.svg"
+              alt="Jenafree Labs"
+              className="h-8 w-auto opacity-80 mb-4"
+            />
             <p className="text-sm text-gray-400">
-              QA sob demanda. Sem atravessadores.
+              Tecnologia sob demanda. Verdade em cada entrega.
             </p>
           </div>
 

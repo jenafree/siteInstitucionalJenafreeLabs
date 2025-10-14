@@ -253,3 +253,4 @@ k6 + CI/CD + SLO = deploy confiante.
 **Quer implementar performance testing?**  
 [Solicite uma consultoria →](/contato)
 
+

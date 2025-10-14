@@ -1,20 +1,51 @@
 "use client";
-import { ShieldCheck, Workflow, Gauge, Bug, Cable, PenTool } from "lucide-react";
+import { ShieldCheck, Workflow, Gauge, Bug, Cable, PenTool, Factory, Globe, Code, Brain, Palette } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
 const services = [
-  { icon: <Workflow />, title: "Automação Web/API/Mobile", subtitle: "Playwright, Cypress, Appium. POM/DSL e flakiness control.", bullets: ["E2E estável", "Mocks/fixtures", "Relatórios por PR"], cta: { label: "Ver detalhes", href: "/servicos/automacao-testes" }, badge: "Core" },
-  { icon: <Gauge />, title: "Performance (k6)", subtitle: "Carga, stress, soak. Thresholds e SLO no pipeline.", bullets: ["p95 < 400ms", "Erro < 1%", "Grafana/OTel"], cta: { label: "Ver detalhes", href: "/servicos/performance" } },
-  { icon: <ShieldCheck />, title: "Segurança & Pentest", subtitle: "SAST/DAST/Secrets/SCA + pentest com evidências.", bullets: ["OWASP Top 10", "Relatório executivo", "Correções priorizadas"], cta: { label: "Ver detalhes", href: "/servicos/seguranca" }, badge: "Security" },
-  { icon: <Cable />, title: "CI/CD & DevEx", subtitle: "Quality gates, ambientes efêmeros, canary/rollback.", bullets: ["GH Actions/GitLab", "Vercel/Cloudflare", "Trunk-based"], cta: { label: "Ver detalhes", href: "/servicos/ci-cd" } },
-  { icon: <PenTool />, title: "Design QA & Figma", subtitle: "Do wireframe ao deploy. Acessibilidade e consistência visual.", bullets: ["WCAG", "Visual regression", "Tokens de design"], cta: { label: "Ver detalhes", href: "/servicos/design-qa-figma" } },
-  { icon: <Bug />, title: "Observabilidade & Qualidade Operacional", subtitle: "SLO/SLI por jornada. Synthetic + RUM.", bullets: ["OpenTelemetry", "Alertas úteis", "ROI de QA"], cta: { label: "Ver detalhes", href: "/servicos" } },
+  { 
+    icon: <Factory className="text-jenafreeBlue" />, 
+    title: "QA Factory", 
+    subtitle: "Automação de testes e pipelines inteligentes com IA", 
+    bullets: ["E2E estável", "IA para otimização", "Relatórios automáticos"], 
+    cta: { label: "Ver detalhes", href: "/servicos/automacao-testes" }, 
+    badge: "Core" 
+  },
+  { 
+    icon: <Globe className="text-jenafreeBlue" />, 
+    title: "Web Studio", 
+    subtitle: "Criação de sites, landing pages e blogs sob demanda", 
+    bullets: ["Next.js + Tailwind", "SEO otimizado", "Performance 90+"], 
+    cta: { label: "Ver detalhes", href: "/servicos/web-studio" } 
+  },
+  { 
+    icon: <Code className="text-jenafreeBlue" />, 
+    title: "Software & API Lab", 
+    subtitle: "Desenvolvimento de software e integrações REST", 
+    bullets: ["APIs escaláveis", "Microserviços", "Documentação automática"], 
+    cta: { label: "Ver detalhes", href: "/servicos/software-api" } 
+  },
+  { 
+    icon: <Brain className="text-jenafreeBlue" />, 
+    title: "IA & Automation", 
+    subtitle: "RPA, chatbots e análise preditiva", 
+    bullets: ["Automação inteligente", "Chatbots conversacionais", "Análise de dados"], 
+    cta: { label: "Ver detalhes", href: "/servicos/ia-automation" }, 
+    badge: "AI" 
+  },
+  { 
+    icon: <Palette className="text-jenafreeBlue" />, 
+    title: "AI Design Studio", 
+    subtitle: "Protótipos Figma + geração de UI via IA", 
+    bullets: ["Design System", "IA para UI", "Prototipagem rápida"], 
+    cta: { label: "Ver detalhes", href: "/servicos/design-qa-figma" } 
+  },
 ];
 
 export default function ServicesGrid() {
   return (
     <section className="container mx-auto px-4 md:px-8 py-12">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {services.map((s) => <ServiceCard key={s.title} {...s} />)}
       </div>
     </section>

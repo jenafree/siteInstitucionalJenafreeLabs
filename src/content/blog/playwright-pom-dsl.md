@@ -189,3 +189,4 @@ Se você ainda usa Selenium com sleeps e xpath absoluto, está perdendo tempo (e
 **Quer que a gente estruture sua automação?**  
 [Solicite uma proposta →](/contato)
 
+

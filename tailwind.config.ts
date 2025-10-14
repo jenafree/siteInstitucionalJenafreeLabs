@@ -16,6 +16,9 @@ const config: Config = {
         bg: "#FFFFFF",
         bgAlt: "#F7F9FC",
         blackish: "#0A0A0A",
+        jenafreeBlue: "#001A4D",
+        jenafreeBlueLight: "#004AAD",
+        jenafreeGray: "#F5F7FA",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -57,6 +60,10 @@ const config: Config = {
       boxShadow: {
         card: "0 4px 12px rgba(0,0,0,0.05)",
         hover: "0 6px 18px rgba(0,0,0,0.12)",
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif']
       },
     },
   },

@@ -2,11 +2,11 @@ import { Metadata } from "next";
 
 export const defaultMetadata: Metadata = {
   title: {
-    default: "Jenafree Labs | QA sob Demanda para B2B",
+    default: "Jenafree Labs | A Era Pós-Outsourcing",
     template: "%s | Jenafree Labs",
   },
   description:
-    "Squads de QA sob demanda. Automação, performance e segurança com preço justo e entrega sênior. Transparência total.",
+    "Tecnologia sob demanda. Verdade em cada entrega. Automação inteligente, IA e software sob demanda — sem squads fixas e sem custo invisível.",
   keywords: [
     "QA",
     "Quality Assurance",
@@ -19,6 +19,11 @@ export const defaultMetadata: Metadata = {
     "Playwright",
     "Cypress",
     "k6",
+    "Inteligência Artificial",
+    "IA",
+    "Automação Inteligente",
+    "Outsourcing",
+    "Software sob Demanda",
   ],
   authors: [{ name: "Jenafree Labs" }],
   creator: "Jenafree Labs",
@@ -28,9 +33,9 @@ export const defaultMetadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://jenafreelabs.com",
-    title: "Jenafree Labs | QA sob Demanda para B2B",
+    title: "Jenafree Labs | A Era Pós-Outsourcing",
     description:
-      "Squads de QA sob demanda. Automação, performance e segurança com preço justo e entrega sênior. Transparência total.",
+      "Tecnologia sob demanda. Verdade em cada entrega. Automação inteligente, IA e software sob demanda — sem squads fixas e sem custo invisível.",
     siteName: "Jenafree Labs",
     images: [
       {
@@ -43,9 +48,9 @@ export const defaultMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jenafree Labs | QA sob Demanda para B2B",
+    title: "Jenafree Labs | A Era Pós-Outsourcing",
     description:
-      "Squads de QA sob demanda. Automação, performance e segurança com preço justo e entrega sênior. Transparência total.",
+      "Tecnologia sob demanda. Verdade em cada entrega. Automação inteligente, IA e software sob demanda — sem squads fixas e sem custo invisível.",
     images: ["/static/og-cover.jpg"],
   },
   robots: {
