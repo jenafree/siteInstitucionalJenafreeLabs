@@ -130,7 +130,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
-                "A IA não substituiu pessoas. Substituiu desperdício."
+                &ldquo;A IA não substituiu pessoas. Substituiu desperdício.&rdquo;
               </motion.blockquote>
               
               {/* Layout em colunas */}

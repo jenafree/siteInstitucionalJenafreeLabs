@@ -7,4 +7,3 @@ Host: https://jenafreelabs.com
 
 # Sitemaps
 Sitemap: https://jenafreelabs.com/sitemap.xml
-
