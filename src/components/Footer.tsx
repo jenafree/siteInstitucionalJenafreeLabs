@@ -11,9 +11,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <img
-              src="/jenafree-logo.svg"
+              src="/assets/brand/jenafree-mark.svg"
               alt="Jenafree Labs"
               className="h-8 w-auto opacity-80 mb-4"
+              width="32"
+              height="32"
             />
             <p className="text-sm text-gray-400">
               Tecnologia sob demanda. Verdade em cada entrega.

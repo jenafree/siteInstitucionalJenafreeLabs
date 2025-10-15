@@ -22,7 +22,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "Jenafree Labs",
     "url": "https://jenafree.github.io/siteInstitucionalJenafreeLabs/",
-    "logo": "https://jenafree.github.io/siteInstitucionalJenafreeLabs/jenafree-logo.svg",
+    "logo": "https://jenafree.github.io/siteInstitucionalJenafreeLabs/assets/brand/jenafree-mark.svg",
     "description": "QA sob demanda, automação e performance com IA. Sem squads fixas, só resultado.",
     "foundingDate": "2024",
     "sameAs": [

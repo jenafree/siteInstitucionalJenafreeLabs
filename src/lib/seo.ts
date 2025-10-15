@@ -39,7 +39,7 @@ export const defaultMetadata: Metadata = {
     siteName: "Jenafree Labs",
     images: [
       {
-        url: "/static/og-cover.jpg",
+        url: "/assets/brand/jenafree-logo.svg",
         width: 1200,
         height: 630,
         alt: "Jenafree Labs",
@@ -51,7 +51,7 @@ export const defaultMetadata: Metadata = {
     title: "Jenafree Labs — A Era Pós-Outsourcing",
     description:
       "Qualidade como estratégia. Automação como cultura. Diagnóstico gratuito em 48h.",
-    images: ["/static/og-cover.jpg"],
+    images: ["/assets/brand/jenafree-logo.svg"],
   },
   robots: {
     index: true,

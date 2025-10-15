@@ -28,9 +28,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <motion.img
-              src="/jenafree-logo.svg"
+              src="/assets/brand/jenafree-logo.svg"
               alt="Jenafree Labs"
               className="h-10 w-auto"
+              width="160"
+              height="32"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
