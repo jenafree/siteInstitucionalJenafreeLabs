@@ -6,7 +6,7 @@ export const defaultMetadata: Metadata = {
     template: "%s | Jenafree Labs",
   },
   description:
-    "Tecnologia sob demanda. Verdade em cada entrega. Automação inteligente, IA e software sob demanda — sem squads fixas e sem custo invisível.",
+    "QA sob demanda, automação e performance com IA. Sem squads fixas, só resultado. Diagnóstico gratuito em 48h.",
   keywords: [
     "QA",
     "Quality Assurance",
@@ -28,14 +28,14 @@ export const defaultMetadata: Metadata = {
   authors: [{ name: "Jenafree Labs" }],
   creator: "Jenafree Labs",
   publisher: "Jenafree Labs",
-  metadataBase: new URL("https://jenafreelabs.com"),
+  metadataBase: new URL("https://jenafree.github.io/siteInstitucionalJenafreeLabs"),
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://jenafreelabs.com",
-    title: "Jenafree Labs | A Era Pós-Outsourcing",
+    url: "https://jenafree.github.io/siteInstitucionalJenafreeLabs",
+    title: "Jenafree Labs — A Era Pós-Outsourcing",
     description:
-      "Tecnologia sob demanda. Verdade em cada entrega. Automação inteligente, IA e software sob demanda — sem squads fixas e sem custo invisível.",
+      "Qualidade como estratégia. Automação como cultura. Diagnóstico gratuito em 48h.",
     siteName: "Jenafree Labs",
     images: [
       {
@@ -48,9 +48,9 @@ export const defaultMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jenafree Labs | A Era Pós-Outsourcing",
+    title: "Jenafree Labs — A Era Pós-Outsourcing",
     description:
-      "Tecnologia sob demanda. Verdade em cada entrega. Automação inteligente, IA e software sob demanda — sem squads fixas e sem custo invisível.",
+      "Qualidade como estratégia. Automação como cultura. Diagnóstico gratuito em 48h.",
     images: ["/static/og-cover.jpg"],
   },
   robots: {

@@ -6,11 +6,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Mail, Phone, Clock } from "lucide-react";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
+import Link from "next/link";
 
 export default function ContatoPage() {
+  const [consent, setConsent] = useState(false);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!consent) {
+      alert("Você deve concordar com a Política de Privacidade para continuar.");
+      return;
+    }
+
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name");
     const email = formData.get("email");
@@ -18,8 +27,8 @@ export default function ContatoPage() {
     const message = formData.get("message");
 
     // Por agora, vamos usar mailto
-    const mailtoLink = `mailto:contato@jenafreelabs.com?subject=Contato de ${name} - ${company}&body=${encodeURIComponent(
-      `Nome: ${name}\nEmail: ${email}\nEmpresa: ${company}\n\nMensagem:\n${message}`
+    const mailtoLink = `mailto:contato@jenafreelabs.com?subject=Diagnóstico Jenafree - ${name} (${company})&body=${encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\nEmpresa: ${company}\n\nMensagem:\n${message}\n\nConsentimento LGPD: Sim`
     )}`;
     window.location.href = mailtoLink;
   };
@@ -123,7 +132,35 @@ export default function ContatoPage() {
                         placeholder="Conte-nos sobre seu desafio de QA..."
                       />
                     </div>
-                    <Button type="submit" size="lg" className="w-full rounded-lg">
+                    
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        id="consent"
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        className="mt-1"
+                        required
+                      />
+                      <label htmlFor="consent" className="text-sm text-gray-600">
+                        Concordo com a{" "}
+                        <Link 
+                          href="/privacidade" 
+                          className="text-primary hover:underline"
+                          target="_blank"
+                        >
+                          Política de Privacidade
+                        </Link>{" "}
+                        e autorizo o tratamento dos meus dados pessoais para fins de contato e diagnóstico.
+                      </label>
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full rounded-lg"
+                      disabled={!consent}
+                    >
                       Enviar Solicitação
                     </Button>
                   </form>
@@ -181,7 +218,14 @@ export default function ContatoPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-text mb-2">WhatsApp</h3>
-                      <p className="text-slate-600">(11) 99999-9999</p>
+                      <a 
+                        href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um diagnóstico gratuito de QA."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-600 hover:text-primary transition-colors"
+                      >
+                        (11) 99999-9999
+                      </a>
                       <p className="text-sm text-slate-500 mt-1">
                         Seg-Sex, 9h às 18h
                       </p>

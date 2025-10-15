@@ -93,8 +93,24 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>contato@jenafreelabs.com</li>
-              <li>WhatsApp: (11) 99999-9999</li>
+              <li>
+                <a 
+                  href="mailto:contato@jenafreelabs.com?subject=Diagnóstico Jenafree - Interesse em QA sob demanda"
+                  className="hover:text-primary transition-colors"
+                >
+                  contato@jenafreelabs.com
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um diagnóstico gratuito de QA."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  WhatsApp: (11) 99999-9999
+                </a>
+              </li>
               <li className="pt-4">
                 <Link href="/contato" className="text-primary hover:text-secondary transition-colors font-medium">
                   Falar com especialista →
@@ -109,10 +125,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© {currentYear} Jenafree Labs. Todos os direitos reservados.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-primary transition-colors">
+            <Link href="/privacidade" className="hover:text-primary transition-colors">
               Privacidade
             </Link>
-            <Link href="#" className="hover:text-primary transition-colors">
+            <Link href="/termos" className="hover:text-primary transition-colors">
               Termos
             </Link>
           </div>
