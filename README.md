@@ -31,12 +31,52 @@ cp .env.example .env.local
 
 ## 🛠️ Desenvolvimento
 
+### Desenvolvimento Local
+
 ```bash
 # Inicie o servidor de desenvolvimento
 npm run dev
 
 # O site estará disponível em http://localhost:3000
 ```
+
+### Automação de Desenvolvimento
+
+O projeto inclui scripts PowerShell para automatizar todo o fluxo de desenvolvimento:
+
+#### Workflow Recomendado
+
+**1. Desenvolvimento:**
+```powershell
+# Iniciar servidor de desenvolvimento
+npm run dev
+```
+
+**2. Publicar Mudanças:**
+```powershell
+# Deploy rápido (build + commit + push)
+.\quick-deploy.ps1
+```
+
+**3. Setup Inicial (Primeira Vez):**
+```powershell
+# Configuração completa
+.\setup-simple.ps1
+```
+
+#### Scripts Disponíveis
+
+| Script | Descrição | Uso |
+|--------|-----------|-----|
+| `setup-simple.ps1` | Setup completo e deploy | Primeira configuração |
+| `quick-deploy.ps1` | Deploy rápido | Mudanças diárias |
+| `dev.ps1` | Desenvolvimento | Servidor local |
+| `setup.ps1` | Setup avançado | Configurações customizadas |
+
+#### Documentação Detalhada
+
+- **`COMO-USAR.md`** - Guia rápido de uso
+- **`SETUP.md`** - Documentação completa
 
 ## 🏗️ Build para Produção
 
@@ -143,16 +183,55 @@ siteInstitucionalJenafreeLabs/
 
 ## 🚀 Deploy
 
-### Vercel (Recomendado)
+### GitHub Pages (Atual)
 
-1. Conecte o repositório na Vercel
-2. Configure as variáveis de ambiente:
-   - `SITE_URL=https://jenafreelabs.com`
-3. Deploy automático em cada push
+O projeto está configurado para deploy automático no GitHub Pages usando GitHub Actions.
+
+**Scripts de Automação Disponíveis:**
+
+#### Setup Completo
+```powershell
+# Executa todo o processo de configuração e deploy
+.\setup-simple.ps1
+```
+
+#### Deploy Rápido
+```powershell
+# Deploy rápido para mudanças diárias
+.\quick-deploy.ps1
+```
+
+#### Opções Avançadas
+```powershell
+# Setup sem operações Git
+.\setup-simple.ps1 -SkipGit
+
+# Setup sem build
+.\setup-simple.ps1 -SkipBuild
+
+# Deploy com mensagem personalizada
+.\quick-deploy.ps1 -Message "Atualização da página principal"
+```
+
+**O que os scripts fazem:**
+- ✅ Verificam dependências (Node.js, npm, Git)
+- ✅ Instalam dependências do projeto
+- ✅ Verificam configuração (next.config.ts, workflow)
+- ✅ Executam build do projeto
+- ✅ Fazem commit automático com timestamp
+- ✅ Fazem push para GitHub
+- ✅ Iniciam deploy automático no GitHub Actions
+
+### Configuração do GitHub Pages
+
+1. Vá para: `https://github.com/jenafree/siteInstitucionalJenafreeLabs/settings/pages`
+2. Em **Source**, selecione: **GitHub Actions**
+3. Salve as configurações
 
 ### Outras Plataformas
 
-O projeto é compatível com qualquer plataforma que suporte Next.js:
+O projeto também é compatível com:
+- Vercel
 - CloudFlare Pages
 - Netlify
 - AWS Amplify
@@ -165,13 +244,66 @@ Meta mínima para todas as páginas:
 - **Best Practices:** ≥ 90
 - **Accessibility:** ≥ 90
 
+## 🔧 Troubleshooting
+
+### Problemas com Scripts PowerShell
+
+**Erro de Execução:**
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+**Erro no Build:**
+```powershell
+# Limpar arquivos temporários
+Remove-Item -Recurse -Force out, .next -ErrorAction SilentlyContinue
+.\setup-simple.ps1
+```
+
+**Erro no Git:**
+```powershell
+# Verificar configuração
+git config --global user.name
+git config --global user.email
+```
+
+### Problemas de Deploy
+
+**GitHub Actions falhando:**
+1. Verifique os logs em: https://github.com/jenafree/siteInstitucionalJenafreeLabs/actions
+2. Certifique-se que o GitHub Pages está configurado para "GitHub Actions"
+3. Verifique se o `next.config.ts` está configurado para export estático
+
+**Site não atualizando:**
+1. Aguarde 3-5 minutos após o push
+2. Verifique se o workflow foi executado com sucesso
+3. Force refresh no navegador (Ctrl+F5)
+
+## 🌐 Links Úteis
+
+### Desenvolvimento
+- **Site Local:** http://localhost:3000
+- **Repositório:** https://github.com/jenafree/siteInstitucionalJenafreeLabs
+- **GitHub Actions:** https://github.com/jenafree/siteInstitucionalJenafreeLabs/actions
+
+### Produção
+- **Site Online:** https://jenafree.github.io/siteInstitucionalJenafreeLabs
+- **GitHub Pages:** https://github.com/jenafree/siteInstitucionalJenafreeLabs/settings/pages
+
+### Documentação
+- **Next.js:** https://nextjs.org/docs
+- **Tailwind CSS:** https://tailwindcss.com/docs
+- **shadcn/ui:** https://ui.shadcn.com/docs
+
 ## 🤝 Contribuindo
 
 1. Fork o projeto
 2. Crie uma branch: `git checkout -b feature/nova-feature`
-3. Commit suas mudanças: `git commit -m 'Add nova feature'`
-4. Push para a branch: `git push origin feature/nova-feature`
-5. Abra um Pull Request
+3. Faça suas alterações
+4. Teste com: `.\quick-deploy.ps1`
+5. Commit suas mudanças: `git commit -m 'Add nova feature'`
+6. Push para a branch: `git push origin feature/nova-feature`
+7. Abra um Pull Request
 
 ## 📄 Licença
 
