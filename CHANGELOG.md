@@ -2,6 +2,41 @@
 
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
+## [1.2.0] - 2025-01-14
+
+### ✨ Adicionado
+- **Identidade Visual Completa**
+  - 4 variantes de logo SVG profissionais (horizontal, vertical, mark, mono)
+  - Favicon personalizado baseado na marca Jenafree
+  - Assets organizados em `assets/brand/` e `public/assets/brand/`
+
+### 🔧 Melhorado
+- **Conversão e SEO**
+  - CTA sticky no topo após scroll (300px)
+  - Links WhatsApp reais com mensagem pré-definida
+  - Formulário de contato com consentimento LGPD
+  - Meta tags otimizadas (Open Graph, Twitter Cards)
+  - JSON-LD estruturado para rich snippets
+  - URLs corretas para GitHub Pages
+
+### 📄 Legal e Conformidade
+- **Páginas LGPD** completas (`/privacidade`, `/termos`)
+- **Formulário com consentimento** obrigatório
+- **Links funcionais** no footer (email, WhatsApp)
+- **Conformidade básica** com LGPD
+
+### 🎨 Branding
+- **Logo no Header** com dimensões corretas (160x32)
+- **Mark compacto no Footer** (32x32)
+- **Favicon SVG** escalável e otimizado
+- **Metadados atualizados** com novos assets
+- **Zero 404s** - todos os caminhos corrigidos
+
+### 🚀 Deploy
+- **Caminhos relativos** corrigidos para GitHub Pages
+- **Assets duplicados** em ambas as pastas (src e public)
+- **Build otimizado** com novos recursos
+
 ## [1.1.0] - 2025-01-14
 
 ### ✨ Adicionado
