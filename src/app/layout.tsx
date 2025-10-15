@@ -37,13 +37,13 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR">
-      <head>
+      <body className={`${inter.variable} ${poppins.variable} font-inter`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className={`${inter.variable} ${poppins.variable} font-inter`}>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
