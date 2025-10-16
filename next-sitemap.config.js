@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://jenafreelabs.com',
+  siteUrl: process.env.SITE_URL || 'https://jenafree.github.io/siteInstitucionalJenafreeLabs',
   generateRobotsTxt: true,
   outDir: 'public',
   exclude: ['/api/*'],
@@ -12,7 +12,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://jenafreelabs.com/sitemap.xml',
+      'https://jenafree.github.io/siteInstitucionalJenafreeLabs/sitemap.xml',
     ],
   },
 };
