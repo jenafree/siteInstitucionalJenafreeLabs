@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://jenafreelabs.com
+Host: https://jenafree.github.io/siteInstitucionalJenafreeLabs
 
 # Sitemaps
-Sitemap: https://jenafreelabs.com/sitemap.xml
+Sitemap: https://jenafree.github.io/siteInstitucionalJenafreeLabs/sitemap.xml
